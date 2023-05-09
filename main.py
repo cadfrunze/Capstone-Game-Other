@@ -1,14 +1,17 @@
-# Configurarea UI + rulare joc
+
 from tkinter import *
 from functionalitati import afisare, learn
 import datetime
 import pandas
 
+# Configurarea UI + rulare joc
+
 words: dict = afisare()
 de_invatat = []
 
 
-def nex_card():
+def next_card():
+    """Functie pt next card, adica va afisa o noua valoare"""
     global words, timer
     window.after_cancel(timer)
     words = afisare()
@@ -20,6 +23,7 @@ def nex_card():
 
 
 def unknow_card():
+    """Functie afisare traducere din next_card a cuvantului din engleza"""
     global words, timer
     canvas.itemconfig(img_canvas, image=img_back)
     canvas.itemconfig(prim_cuvant, text="Romana")
@@ -27,16 +31,17 @@ def unknow_card():
 
 
 def cunoastere():
+    """Functie pt butonul 'cunosc'"""
     learn.remove(words)
-    nex_card()
+    next_card()
 
 def nu_cunoaste():
+    """Functie pt butonul 'nu cunosc'"""
     global de_invatat
     de_invatat.append(words)
-    nex_card()
+    next_card()
 
-
-# timer = None
+# UI
 window = Tk()
 window.title('Flasy')
 window.config(padx=20, pady=20)
@@ -59,9 +64,11 @@ know_but.grid(column=1, row=1)
 unknow_but = Button(image=unknow_img, highlightthickness=0, command=nu_cunoaste)
 unknow_but.grid(column=0, row=1)
 
-nex_card()
+next_card()
 
 window.mainloop()
+
+# Dupa inchiderea programului
 
 all_data = {
     str(datetime.datetime.now()): de_invatat,
@@ -74,9 +81,10 @@ except FileNotFoundError:
     data.to_csv('./data/de_invatat.csv')
 else:
     data = pandas.read_csv('./data/de_invatat.csv')
-    dictionar = data.to_dict()
+    dictionar = data.to_dict(orient='list')
     dictionar.update(all_data)
     print(dictionar)
-    second_data = pandas.DataFrame(dictionar)
-    print(second_data)
+
+
+    # second_data = pandas.DataFrame(dictionar)
 
