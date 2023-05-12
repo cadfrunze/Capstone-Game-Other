@@ -102,5 +102,45 @@
         "c\u00e2\u015ftig"
       ]
     }
+  },
+  "2023-05-13 00:34:14.198531": {
+    "cunoaste": {
+      "en": [
+        "balance",
+        "listen",
+        "brain",
+        "monster",
+        "here",
+        "mouth",
+        "amaze",
+        "case"
+      ],
+      "ro": [
+        "echilibru",
+        "asculta",
+        "creier",
+        "monstru",
+        "Aici",
+        "gur\u0103",
+        "uimi",
+        "caz"
+      ]
+    },
+    "nu_cunoaste": {
+      "en": [
+        "worst",
+        "excitement",
+        "murmur",
+        "grab",
+        "avoid"
+      ],
+      "ro": [
+        "cel mai r\u0103u",
+        "entuziasm",
+        "murmur",
+        "apuca",
+        "evita"
+      ]
+    }
   }
 }

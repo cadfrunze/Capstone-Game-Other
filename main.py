@@ -116,7 +116,7 @@ else:
 # Salvare date in foderrul ./history history.json
 TIMP_DATA = f'{datetime.datetime.now()}'
 data_json = {
-    f'{TIMP_DATA}': {
+    TIMP_DATA: {
         'cunoaste': {
             'en': cunoscut['en'],
             'ro': cunoscut['ro'],
