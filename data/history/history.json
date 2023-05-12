@@ -74,5 +74,33 @@
         "sim\u021bit"
       ]
     }
+  },
+  "2023-05-13 00:27:53.948618": {
+    "cunoaste": {
+      "en": [
+        "stun",
+        "chance"
+      ],
+      "ro": [
+        "\u00een\u021bep\u0103tur\u0103",
+        "\u015fans\u0103"
+      ]
+    },
+    "nu_cunoaste": {
+      "en": [
+        "attempt",
+        "dig",
+        "cousin",
+        "shove",
+        "gain"
+      ],
+      "ro": [
+        "atentat, \u00eencercare",
+        "s\u0103pa",
+        "v\u0103r",
+        "scutur\u0103",
+        "c\u00e2\u015ftig"
+      ]
+    }
   }
 }

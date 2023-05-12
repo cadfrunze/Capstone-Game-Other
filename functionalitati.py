@@ -6,6 +6,6 @@ learn = data.to_dict('records')
 
 
 def afisare():
+    """Functionalitate random cuvinte din Frequency list-en-ro.csv"""
     ran_choice = random.choice(learn)
     return ran_choice
-
